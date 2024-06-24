@@ -1,0 +1,80 @@
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+  color: #fff;
+  font-family: "Courier New", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+main {
+  width: 180px;
+  margin: 16px auto;
+}
+
+#timer {
+  border-radius: 4px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: end;
+}
+
+#board {
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 4px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+}
+#board li {
+  background-color: rgb(96, 96, 219);
+  box-shadow: 0 4px 1px rgb(57, 57, 109);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 4px;
+  margin: 5px 8px;
+}
+#board li.pressed {
+  box-shadow: none;
+  background: #ccc;
+  margin-top: 9px;
+}
+
+#start {
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  background-color: rgb(208, 14, 14);
+  box-shadow: 0 2px 0 rgb(83, 8, 8);
+  text-align: center;
+  padding: 8px;
+}
+#start:active.pressed {
+  box-shadow: none;
+  margin-top: 12px;
+}
+
+#start.inactive {
+  pointer-events: none;
+  box-shadow: none;
+  margin-top: 12px;
+  color: #ccc;
+}/*# sourceMappingURL=style.css.map */

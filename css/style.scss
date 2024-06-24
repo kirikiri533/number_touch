@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+$ColorBackStage:#ccc;
+$ColorWhite:#fff;
+$ColorPink:rgb(233, 163, 175);
+$ColorBlue:rgb(96, 96, 219);
+$ColorRed:rgb(208, 14, 14);
+$Brd:4px;
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    user-select: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ccc;
+    color: $ColorWhite;
+    font-family: 'Courier New', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.message{
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+main{
+    //50 * 2 + 10 * 2
+    width: 180px;
+    margin: 16px auto;
+}
+#timer{
+    // background: $ColorPink;
+    border-radius: $Brd;
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: end;
+}
+
+#board{
+    background: $ColorWhite;
+    border-radius: $Brd;
+    padding: 10px 4px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        background-color: $ColorBlue;
+        box-shadow:0 4px 1px rgb(57, 57, 109);
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: $Brd;
+        margin:5px 8px;
+    }
+    li.pressed{
+        box-shadow: none;
+        background: $ColorBackStage;
+        margin-top: 9px; 
+    }
+}
+#start{
+    // background: $ColorPink;
+    border-radius: $Brd;
+    cursor: pointer;
+    margin-top: 8px;
+    background-color: $ColorRed;
+    box-shadow: 0 2px 0 rgb(83, 8, 8);
+    text-align: center;
+    padding: 8px;
+    &:active.pressed{
+        box-shadow: none;
+        margin-top: 12px; 
+    }
+}
+#start.inactive{
+    pointer-events: none;
+    box-shadow: none;
+    margin-top: 12px; 
+    color: $ColorBackStage;
+}
+
